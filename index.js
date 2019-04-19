@@ -6,14 +6,9 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
 }));
 
-// app.get('/', function(req, res) {
-//     res.send('Hello World!');
-// });
-
 app.post('/test', (req, res) => {
     let str = req.body.string_to_cut
     let output = '';
-    //console.log(str.string_to_cut)
     for (let i = 2; i < str.length; i += 3) {
         output += str[i]
     }
